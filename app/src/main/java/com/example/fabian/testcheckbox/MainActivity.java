@@ -1,5 +1,6 @@
 package com.example.fabian.testcheckbox;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    private CheckBox cb1;
+    private CheckBox cb2;
+    private CheckBox cb3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +25,48 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        cb1 = (CheckBox) findViewById( R.id.checkBox );
+        cb2 = (CheckBox) findViewById( R.id.checkBox2 );
+        cb3 = (CheckBox) findViewById( R.id.checkBox3 );
+
+        cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if( isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_left_checked );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }else if( !isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_left );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }
+            }
+        });
+
+        cb2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if( isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_top_checked );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }else if( !isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_top );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }
+            }
+        });
+
+        cb3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if( isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_right_checked );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }else if( !isChecked ){
+                    Drawable ic = getResources().getDrawable( R.drawable.ic_right );
+                    buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
+                }
+            }
+        });
     }
 
     @Override
