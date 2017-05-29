@@ -26,6 +26,7 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="CheckBox"
         app:layout_constraintRight_toLeftOf="@+id/guideline"
         android:layout_marginRight="8dp"
@@ -34,12 +35,14 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        android:button="@android:color/transparent"/>
+        android:button="@android:color/transparent"
+        android:background="@drawable/cb_bg"/>
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="CheckBox"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
@@ -47,12 +50,14 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
         app:layout_constraintRight_toLeftOf="@+id/guideline2"
         android:layout_marginRight="8dp"
-        android:button="@android:color/transparent"/>
+        android:button="@android:color/transparent"
+        android:background="@drawable/cb_bg"/>
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:text="CheckBox"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -60,5 +65,6 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
-        android:button="@android:color/transparent"/>
+        android:button="@android:color/transparent"
+        android:background="@drawable/cb_bg"/>
 </android.support.constraint.ConstraintLayout>
