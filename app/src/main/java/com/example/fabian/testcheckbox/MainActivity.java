@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 if( isChecked ){
                     Drawable ic = getResources().getDrawable( R.drawable.ic_left_checked );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
-                }else if( !isChecked ){
+                }else {
                     Drawable ic = getResources().getDrawable( R.drawable.ic_left );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
                 }
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 if( isChecked ){
                     Drawable ic = getResources().getDrawable( R.drawable.ic_top_checked );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
-                }else if( !isChecked ){
+                }else {
                     Drawable ic = getResources().getDrawable( R.drawable.ic_top );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
                 }
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 if( isChecked ){
                     Drawable ic = getResources().getDrawable( R.drawable.ic_right_checked );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
-                }else if( !isChecked ){
+                }else {
                     Drawable ic = getResources().getDrawable( R.drawable.ic_right );
                     buttonView.setCompoundDrawablesWithIntrinsicBounds(null, ic, null, null);
                 }
